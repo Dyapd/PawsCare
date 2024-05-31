@@ -5,8 +5,8 @@
 /* header styles */
 header{
     height: 100px;
-    background: rgb(103,118,87);
-    background: linear-gradient( rgba(103,118,87,1) 0%, rgba(61,70,51,1) 100%);
+    background:#AF8C53;
+   
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -17,12 +17,17 @@ header{
 .header-border{
     width: 100%;
     display: flex;
-    justify-content: space-evenly;
     align-self: center;
     flex-wrap: wrap;
 }
 
-
+.header-name{
+    display: flex;
+    justify-content: left;
+    margin-right: auto;
+    margin-left: 10%;
+    border: rebeccapurple;
+}
 
 .logo-img{
     display: flex;
@@ -33,7 +38,14 @@ header{
 
 .logo-img a{
     width: 100px;
+    size: 10px;
     justify-content: left;
+}
+
+.logo-img h1{
+    width: 100px;
+    color: white;
+    justify-content: right;
 }
 
 

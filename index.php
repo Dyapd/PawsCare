@@ -29,9 +29,12 @@
                 <a href="index.php">
                     <img src="images/pawslogo.png" alt="Logo" width="75px">
                 </a>
-                
+                <h1>
+                    Paws Perfect Pet Care
+                </h1>
             </div> 
         </div>
+        
     </header>
 
     <header class="header-bottomshape">
