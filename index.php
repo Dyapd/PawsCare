@@ -10,14 +10,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="base.css">
-    <link rel="stylesheet" href="layouts.css">
-    <link rel="stylesheet" href="modules.css">
+    <link rel="stylesheet" href="basep.css">
+    <link rel="stylesheet" href="layoutsp.css">
+    <link rel="stylesheet" href="modulesp.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
     <title>
-        SDP Home Page
+        Paws Cares
     </title>
 </head>
 <body>
@@ -27,42 +27,31 @@
         <div class="header-border">
             <div class="logo-img">
                 <a href="index.php">
-                    <img src="images/pawslogo.png" alt="Logo" width="75px">
+                    <img src="images/logowithtitle.png" alt="Logo" width="75px">
                 </a>
-                <h1>
-                    Paws Perfect Pet Care
-                </h1>
+                
+                
+
             </div> 
+
+            <div class="header-right">
+                <?php if(empty($_SESSION)) : ?> <!-- check if session is empty -->
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#modal-login">Login</a>
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#modal-login">Signup</a>
+                <?php endif ?>
+
+                <!-- check if session has loggedon set if so then is logged in -->
+                <?php if(isset($_SESSION['loggedon'])) : ?>
+                    <a href="database/logout.php" >Signout</a>
+                <?php endif ?>
+            </div>
         </div>
         
     </header>
 
-    <header class="header-bottomshape">
-        <nav>
-            <ul>
-                <li>
-                    <a href="aboutUs.php">About</a>
-                    <a href="entryList.php">Entry List</a>
-
-                    <?php if(empty($_SESSION)) : ?> <!-- check if session is empty -->
-                        <a href="#" data-bs-toggle="modal" data-bs-target="#modal-login">Login</a>
-                    <?php endif ?>
-
-                    <!-- check if session has loggedon set if so then is logged in -->
-                    <?php if(isset($_SESSION['loggedon'])) : ?>
-                        <a href="database/logout.php" >Signout</a>
-                        <a href="entrySubmission.php">Submit Entry</a>
-                    <?php endif ?>
-                </li>
-            </ul>
-        </nav>
-    </header>
-
     <main class="main-home">
 
-        
-
-<!-- check if session is empty (not logged in)  -->
+        <!-- check if session is empty (not logged in)  -->
         <?php if(empty($_SESSION)) : ?>
             <div class="modal fade" id="modal-login" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
@@ -94,181 +83,22 @@
 
        
 
-        <div class="content-top-center-home">
-            <div class="home-top-container">
-                <img src="images/placeholder-img-home.png" alt="Image Unavalaible" class="home-main-img">
-                <div class="home-top-box">
-                    <h3>
-                        Name: A Messy Mess
-                    </h3>
-                    <p>
-                    An event known as A Messy Mess, where it blocks a particular area for a particular amount of time. The only warning sign is a smell of oranges! 
-                    </p>
+        <div class="content-top-home">
+            <div class="left-top-home">
 
-                    <h3>
-                        <br>Active Locations:
-                    </h3>
-                    <p>
-                        * Chile
-                        <br>
-                        * Brazil
-                        <br>
-                        * Argentina
-                        <br>
-                        * Peru
-                    </p>
+            </div>
 
-                    <a href="entryTemplate.php?id=35">Learn More</a>
-                </div>
+            <div class="right-top-home">
+
             </div>
         </div>
 
-        <div class="content-left-home">
-            <div class="content-left-top-home">
-               
-                <a href="#">Active Anomalies</a>
-                
+        <div class="content-middle-home">
 
-                <div id="pics-active-home" class="carousel slide">
-                    <div class="carousel-indicators">
-                      <button type="button" data-bs-target="#pics-active-home" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                      <button type="button" data-bs-target="#pics-active-home" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                      <button type="button" data-bs-target="#pics-active-home" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                    </div>
-                    <div class="carousel-inner">
-                      <div class="carousel-item active">
-                        <a href="entryTemplate.php?id=40"><img src="images/samplean.jpg" class="d-block w-100" alt="..."></a>
-                        <div class="carousel-caption d-none d-md-block active-home">
-                            <h5>The Moving City</h5>
-                        </div>
-                      </div>
-                      <div class="carousel-item">
-                        <a href="entryTemplate.php?id=41"><img src="images/pl001.png" class="d-block w-100" alt="..."></a>
-                        <div class="carousel-caption d-none d-md-block active-home">
-                            <h5>Bermuda Triangle</h5>
-                        </div>
-                      </div>
-                      <div class="carousel-item">
-                        <a href="entryTemplate.php?id=57"><img src="images/watcherslogo.png" class="d-block w-100" alt="SAMPLEPICTURE"></a>
-                        <div class="carousel-caption d-none d-md-block active-home">
-                            <h5>Cliche Story</h5>
-                        </div>
-                      </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#pics-active-home" data-bs-slide="prev">
-                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#pics-active-home" data-bs-slide="next">
-                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Next</span>
-                    </button>
-                  </div>
-            </div>
-            <div class="content-left-bottom-home">
-                <a href="#">Recently Encountered Anomalies</a>
-
-                <div id="pics-recent-home" class="carousel slide">
-                    <div class="carousel-indicators">
-                      <button type="button" data-bs-target="#pics-recent-home" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                      <button type="button" data-bs-target="#pics-recent-home" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                      <button type="button" data-bs-target="#pics-recent-home" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                    </div>
-                    <div class="carousel-inner">
-                      <div class="carousel-item active">
-                            <a href="entryTemplate.php?id=37"><img src="images/samplean2.jpg" class="d-block w-100" alt="..."></a>
-                            <div class="carousel-caption d-none d-md-block active-home" >
-                                <h5>Borealis Worm</h5>
-                            </div>
-                        </div>
-                        <div class="carousel-item ">
-                            <a href="entryTemplate.php?id=61"><img src="images/en004.jpg" class="d-block w-100" alt="SAMPLEPICTURE"></a>
-                            <div class="carousel-caption d-none d-md-block active-home">
-                                <h5>Anywhere Dude</h5>
-                            </div>
-                        </div>
-                        <div class="carousel-item ">
-                            <a href="entryTemplate.php?id=62"><img src="images/watcherslogo.png" class="d-block w-100" alt="SAMPLEPICTURE"></a>
-                            <div class="carousel-caption d-none d-md-block active-home">
-                                <h5>Sudden Human Combustion Syndrome</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#pics-recent-home" data-bs-slide="prev">
-                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#pics-recent-home" data-bs-slide="next">
-                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Next</span>
-                    </button>
-                  </div>
-            </div>
-        </div>
-
-        <div class="content-right-home">
-            <h1>
-                Announcements:
-            </h1>
-           <hr>
-
-           <div class="content-right-news-home">
-           <h4>
-            A Messy Mess Spotted in Argentina!
-           </h4>
-           <p>
-           EV-014 is reported to be targeting the town of San Luis in Argentina. Local SDP branches had already dispatched 
-           guardsmen in order to evacuate the town, and to establish a perimeter around the area. This has been its 5th sighting
-            throughout its history, and the SDP is hoping to establish a new strategy in countering the anomaly.
-           </p>
-            </div>
-           
-           <br>
-
-           <hr>
-           <div class="content-right-news-home">
-            <h4>
-             SDP's Presence in South Africa, Increased?
- 
-            </h4>
-            <p>
-            New bases in South Africa were established, particularly in the regions of the Northern Cape, 
-            and Eastern Cape, in order to combat the rising appearances of anomalies in the area. The president
-             of South Africa had expressed thanks for the new reinforcements coming to their country and they promise 
-             to also house and support the SDP agents whenever and wherever they can.
-            </p>
-            </div>
-           <br>
-           
-           <hr>
-            </ul>
         </div>
 
         <div class="content-bottom-home">
-            <h4>
-                Guide to SDP
-            </h4>
             
-            <br>
-
-            <p>
-                With the rise of anomalies in the 1950’s. The world then has since faced numerous dangers. From the attempted invasion of the alternate world ‘Earth Bet’ to the various city ending calamities that roam our world today.
-            </p>
-
-            <br>
-
-            <p>
-                This website was made by the SDP International to act as an information site for the public. So that you know which threats inhabit your area, recognize which anomalies to avoid and as another hub for information regarding anomalies. 
-            </p>
-
-            <br>
-
-            <p>
-                To learn more about the terminologies used by our organization, please click Learn More.    
-            </p>
-
-
-            <a href="terminologies.php">Learn More</a>
         </div>
 
     </main>
