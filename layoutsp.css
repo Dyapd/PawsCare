@@ -5,7 +5,7 @@
 /* header styles */
 header{
     height: 100px;
-    background:#AF8C53;
+    background:#9d7a42;
    
     display: flex;
     justify-content: space-around;
@@ -23,15 +23,14 @@ header{
 }
 
 .header-right{
-    width: 20%;
+    width: 40%;
     justify-content: right;
     align-items: center;
     display: flex;
-    margin-right: 10%;
 }
 
 .header-right a {
-    margin-left: 5%;
+    margin-right: 5%;
     height: 30%;
     text-decoration: none;
     color: black;
@@ -54,8 +53,6 @@ header{
 
 .logo-img{
     display: flex;
-    
-    margin-left: 10%;
     width: 60%;
 }
 
@@ -147,26 +144,13 @@ footer{
     margin-top: 50px;
     height: 150px;
     width: 100%;
-    background-color: #3D4633;
+    background-color:#252926;
     display: flex;
     justify-content: flex-end;
     align-items: center;
     flex-wrap: wrap;
     border: black;
     position: absolute;
-}
-
-.link{
-    border: rgb(50, 56, 41) solid;
-    border-radius: 0;
-    height: 30px;
-    padding: 0 60px;
-    margin-top: 10px;
-    margin-right: 400px;
-    margin-left: 400px;
-    color: white;
-    background: rgb(61,70,51);
-    background: linear-gradient(90deg, rgba(61,70,51,1) 0%, rgba(135,163,150,1) 100%);
 }
 
 
@@ -283,8 +267,7 @@ footer a{
 .main-home{
     display: flex;
     min-height: calc(100vh - 265px);
-    width: 80%;
-    align-items: center;
+    width: 100%;
     justify-content: space-evenly;
     margin: auto;
     flex-wrap: wrap;

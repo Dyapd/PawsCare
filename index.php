@@ -29,9 +29,6 @@
                 <a href="index.php">
                     <img src="images/logowithtitle.png" alt="Logo" width="75px">
                 </a>
-                
-                
-
             </div> 
 
             <div class="header-right">
@@ -83,22 +80,30 @@
 
        
 
-        <div class="content-top-home">
-            <div class="left-top-home">
+        <div class="left-top-home">
+            <h2>
+                Trusted care and comfort for your furry friends
+            </h2>
 
-            </div>
+            <button type="button" class="btn btn-primary btn-lg">
+                Large button
+            </button>
+        </div>
 
-            <div class="right-top-home">
-
-            </div>
+        <div class="right-top-home">
+            <img src="#" alt="#">
         </div>
 
         <div class="content-middle-home">
-
+            <h2>
+                Why Paw Cares?
+            </h2>
         </div>
 
         <div class="content-bottom-home">
-            
+            <h2>
+                Services
+            </h2>
         </div>
 
     </main>
@@ -106,21 +111,8 @@
 
     
     <footer>
-        <div class="footer-top">
-            <a href="recruitment.php" class="btn btn-info link" role="button">RECRUITMENT</a>
-            <a href="#" class="btn btn-info link" role="button" data-bs-toggle="modal" data-bs-target="#modal-report">REPORT</a>
-        </div>
- 
-        <div class="footer-bottom-left">
-            <a href="history.php">History</a>
-        </div>
 
-        <div class="footer-bottom">
-            <a href="#" data-bs-toggle="modal" data-bs-target="#modal-feedback">Feedback</a>
-            <a href="privacy.php">Privacy</a>
-            <a href="termsAndAgreements.php">Terms and Agreements</a>
-            <a href="contactUs.php">Contact</a>
-        </div>
+
     </footer>
 
 
