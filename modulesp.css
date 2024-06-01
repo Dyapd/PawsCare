@@ -7,12 +7,15 @@
 
 /* styles for classes inside main-home */
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (max-width: 728px) {
+    .header-right{
+        width: 100%;
+    }
     .left-top-home{
         width: 100%;
-        min-height: 70vb;
-        background-color: #343935;
-        border: rebeccapurple;
+    }
+    .right-top-home{
+        width: 100%;
     }
 }
 
