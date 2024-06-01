@@ -157,15 +157,21 @@
     
     <footer>
         <div class="footer-left">
-            <h4>
-                About Us
-            </h4>
+            <a href="aboutus.php">
+                <h4>
+                    About Us
+                </h4>
+            </a>
+            
 
             <img src="images/pawslogo.png" alt="logo image">
-
+            
+            <a href="contactphp">
             <h4>
                 Contact Us 
             </h4>
+            </a>
+            
         </div>
 
         <div class="footer-right">
