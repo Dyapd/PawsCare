@@ -34,11 +34,13 @@
             <div class="header-right">
                 <?php if(empty($_SESSION)) : ?> <!-- check if session is empty -->
                         <a href="#" data-bs-toggle="modal" data-bs-target="#modal-login">Login</a>
-                        <a href="#" data-bs-toggle="modal" data-bs-target="#modal-login">Signup</a>
+                        <a href="signup.php">Signup</a>
                 <?php endif ?>
 
                 <!-- check if session has loggedon set if so then is logged in -->
                 <?php if(isset($_SESSION['loggedon'])) : ?>
+                    <a href="booking.php">Book</a>
+                    <a href="accountuser.php">Profile</a>
                     <a href="database/logout.php" >Signout</a>
                 <?php endif ?>
             </div>
@@ -54,7 +56,7 @@
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <img src="images/sdplogo.png" alt="Logo" class="modal-logo">
+                            <img src="images/pawslogo.png" alt="Logo" class="modal-logo">
                             <h1 class="modal-title fs-5" id="exampleModalLabel">Login</h1>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
@@ -78,6 +80,8 @@
             </div>
         <?php endif ?>
 
+
+
        
 
         <div class="left-top-home">
@@ -89,7 +93,7 @@
             </h2>
 
             <button type="button" class="btn btn-primary btn-lg">
-                Large button
+                Book Now
             </button>
         </div>
 
