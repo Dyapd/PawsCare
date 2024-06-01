@@ -11,7 +11,7 @@
   }
   else 
   {
-    $stmt = $con->prepare("SELECT * from users_db where username = ?");
+    $stmt = $con->prepare("SELECT * from profiles_tbl where username = ?");
     $stmt->bind_param("s", $username);
     $stmt->execute();
     $stmt_result = $stmt->get_result();

@@ -67,36 +67,21 @@
             $username = $_POST['username'];
             $password = $_POST['password']; 
             
-            /* this is for validation if an username already exists */
-            $stmt = $con->prepare("SELECT id FROM pawscares_db WHERE username = ? LIMIT 1");
-            $stmt->bind_param("s", $username);
-            $stmt->execute();
-            $result = $stmt->get_result();
-
             /* This is the main code for putting everything in the database */
-            if($result->num_rows == 1) 
-            {
-                ?>
-                <script>
-                    alert("Username Already Exists.");
-                </script>
-                <?php
 
-            } 
-            else 
-            {
-                $stmt = $con->prepare("INSERT INTO entrysubdb(fname, mname, lname, username, password) values (?, ?, ?, ?, ?)");
-                $stmt->bind_param("sssss", $fname, $mname, $lname, $username, $password);
-                $stmt->execute();
-                ?>
-                <script>
-                    alert("User Account Successfully Created!");
-                </script>
-                <?php
-                header("Location:index.php");
-                $stmt->close();
-                $con->close();
-            }
+
+            $stmt = $con->prepare("INSERT INTO profiles_tbl(fname, mname, lname, username, password) values (?, ?, ?, ?, ?)");
+            $stmt->bind_param("sssss", $fname, $mname, $lname, $username, $password);
+            $stmt->execute();
+            ?>
+            <script>
+                alert("User Account Successfully Created!");
+            </script>
+            <?php
+            header("Location:index.php");
+            $stmt->close();
+            $con->close();
+        
         }
     }elseif(isset($_REQUEST['entryEdit']))
     {
