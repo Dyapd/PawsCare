@@ -82,7 +82,10 @@
 
         <div class="left-top-home">
             <h2>
-                Trusted care and comfort for your furry friends
+                Trusted care <br>
+                and comfort <br>
+                for your furry <br>
+                friends
             </h2>
 
             <button type="button" class="btn btn-primary btn-lg">
@@ -142,14 +145,50 @@
             </div>
         </div>
 
-        
+
 
     </main>
 
 
     
     <footer>
+        <div class="footer-left">
+            <h4>
+                About Us
+            </h4>
 
+            <img src="images/pawslogo.png" alt="logo image">
+
+            <h4>
+                Contact Us 
+            </h4>
+        </div>
+
+        <div class="footer-right">
+            <h4>
+                Let's Talk
+            </h4>
+
+            <h4>
+            1318 España Boulevard, Manila
+            </h4>
+            <h4>
+            0961 485 0754
+            </h4>
+            <h4>
+            paws.cares4@gmail.com
+            </h4>
+
+            <div class="footer-right-container">
+                <p>
+                    Get Socials
+                </p>
+
+                <img src="#" alt="fb logo">
+                <img src="#" alt="X logo">
+                <img src="#" alt="instagram logo">
+            </div>
+        </div>
 
     </footer>
 

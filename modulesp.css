@@ -18,14 +18,12 @@
 
 .content-top-home{
     background-color: #343935;
-
-    height: 350px;
     width: 100%;
 }
 
 .left-top-home{
     width: 50%;
-    min-height: 70vb;
+    min-height: 60vb;
     background-color: #343935;
     border: rebeccapurple;
 }
@@ -46,27 +44,32 @@
 .content-middle-home{
     width: 100%;
     background-color: #252926;
+    min-height: 50vb;
 }
 
 .content-bottom-home{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+    min-height: 50vb;
 }
 
 .content-bottom-topleft-home{
     width: 100%;
     background-color: #252926;
+    display: flex;
 }
 
 .content-bottom-left-home{
     width: 50%;
     background-color: #252926;
+    text-align: center;
 }
 
 .content-bottom-right-home{
     width: 50%;
     background-color: #252926;
+    text-align: center;
 }
 
 

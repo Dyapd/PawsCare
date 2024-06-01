@@ -41,8 +41,6 @@ header{
     color: white;
 }
 
-
-
 .header-name{
     display: flex;
     justify-content: left;
@@ -56,92 +54,15 @@ header{
     width: 60%;
 }
 
-
-
-.logo-img a{
-    width: 100px;
-    size: 1000px;
-    justify-content: left;
-}
-
-.logo-img h1{
-    width: 100px;
-    color: white;
-    justify-content: right;
-}
-
-
 .logo-img a img{
     width: 250px;
     justify-content: left;
 }
 
-header nav ul{
-    display: flex;
-    list-style-type: none;
-}
-
-.search-container{
-    margin: auto;
-    height: 35px;
-    width: 225px;
-    display: inline-flex;
-    border: 2px solid white;
-    overflow: hidden;
-    
-}
-
-.search-icon {
-    width: 20px;
-    height: 20px;
-    margin: 5px 5px 0 0;
-    cursor: pointer;
-}
-
-.searchBox{
-    outline: none;
-    border: 0;
-    flex: 1;
-    color: white;
-    background-color: rgba(0,0,0,0);
-}
-
-.searchBox::placeholder{
-    padding: 3px;
-    color: white;
-    opacity: 1;
-}
-
-header nav ul a {
-    text-decoration: none;
-    color: white;
-    margin-right: 20px;
-    font-size: 15px;
-}
-
-header nav ul a:hover {
-    color: gray;
-}
-
-.header-bottomshape {
-    background: #3D4633;
-    height: 35px;
-    border-top: black solid 1px;
-    display: flex;
-    align-items: center;
-    margin-bottom: 30px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-.header-bottomshape li a {
-    font-size: 16px;
-    padding: 5px 30px 5px 30px;
-}
-
 
 /* Footer styles */
 footer{
-    height: 150px;
+    min-height: 150px;
     width: 100%;
     background-color:#424242;
     display: flex;
@@ -150,56 +71,28 @@ footer{
     flex-wrap: wrap;
     border: black;
     position: absolute;
+    color: #AF8C53;
 }
-
-
-
-footer a{
-    color: white;
-    margin-left: 50px;
-    text-decoration: none;
-}
-
-.footer-top{
+.footer-left{
+    
     display: flex;
-    justify-content: space-evenly;
-    font-family: 'Roboto Slab';
-    margin-top: 10px;
-    width: 100%;
-    height: 40px;
-    width: 100%;
-}
-
-.footer-bottom-left{
-    font-size: 14px;
-    margin: 0;
-    text-align: left;
-    padding-right: 20px;
-    padding-top: 50px;
+    flex-direction: column;
+    align-items: center;
     width: 50%;
-    height: 90px; 
-    font-family: 'Roboto Slab';
+    justify-content: center;
+}
+.footer-left img{
+    width: 150px;
 }
 
-.footer-bottom-left a:hover{
-    color: gray;
-}
-
-
-.footer-bottom{
-    font-size: 14px;
-    margin: 0;
-    text-align: right;
-    padding-right: 20px;
-    padding-top: 50px;
+.footer-right{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 50%;
-    height: 90px; 
-    font-family: 'Roboto Slab';
+    justify-content: ce;
 }
 
-.footer-bottom a:hover{
-    color: gray;
-}
 
 /* style for modals (popups) */
 
