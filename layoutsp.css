@@ -141,10 +141,9 @@ header nav ul a:hover {
 
 /* Footer styles */
 footer{
-    margin-top: 50px;
     height: 150px;
     width: 100%;
-    background-color:#252926;
+    background-color:#424242;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -273,153 +272,7 @@ footer a{
     flex-wrap: wrap;
 }
 
-/* style for the entry template */
-.main-entry{
-    display: flex;
-    min-height: calc(100vh - 265px);
-    width: 60%;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-    flex-wrap: wrap;
+.main-home{
+    color: #AF8C53;
 }
 
-/* style of about us page */
-
-.main-about{
-    display: flex;
-    flex-wrap: wrap;
-    min-height: calc(100vh - 265px);
-    width: 80%;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-}
-
-
-/* style for search page */
-.main-search{
-    display: flex;
-    flex-wrap: wrap;
-    width: 80%;
-    min-height: calc(100vh - 265px);
-    align-items: flex-start;
-    justify-content: center;
-}
-
-/* style for entry submission page */
-.main-entrysubmission{
-    display: flex;
-    flex-wrap: wrap;
-    min-height: calc(100vh - 265px);
-    width: 80%;
-    margin: auto;
-}
-
-/* style for contact us page */
-.main-contact{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    min-height: calc(100vh - 265px);
-    width: 80%;
-    margin: auto;
-}
-/* style for terminologies page */
-
-.main-terms{
-    display: flex;
-    flex-wrap: wrap;
-    min-height: calc(100vh - 265px);
-    width: 80%;
-    margin: auto;
-}
-
-
-/* style for faq page */
-.main-faq{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    min-height: calc(100vh - 265px);
-    width: 80%;
-    margin: auto;
-}
-
-/* style for privacy page */
-
-.main-privacy{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    min-height: calc(100vh - 265px);
-    width: 80%;
-    margin: auto;
-}
-
-/* style for terms and agreements page */
-
-.main-termsand{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    min-height: calc(100vh - 265px);
-    width: 80%;
-    margin: auto;
-}
-
-/* style for entry list page */
-
-.main-entryList{  
-    display: flex;
-    min-height: calc(100vh - 265px);
-    width: 80%;
-    justify-content: center;
-    margin: auto;
-}
-
-
-
-/* style for recruitment page */
-
-.main-recruitment{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    min-height: calc(100vh - 265px);
-    width: 80%;
-    margin: auto;
-}
-
-.main-recruitment h1{
-    width: 100%;
-}
-
-/* sstyle for history page */
-
-.main-history{
-    display: flex;
-    flex-wrap: wrap;
-    min-height: calc(100vh - 265px);
-    width: 80%;
-    margin: auto;
-}
-
-/* put in here becuz it wont work if in modules css? */
-.main-history{
-    font-family: Oswald;
-}
-
-
-/* style for entry edit page */
-
-.main-entryEdit{
-    display: flex;
-    flex-wrap: wrap;
-    min-height: calc(100vh - 265px);
-    width: 80%;
-    margin: auto;
-}

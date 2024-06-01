@@ -101,10 +101,48 @@
         </div>
 
         <div class="content-bottom-home">
-            <h2>
-                Services
-            </h2>
+
+            <div class="content-bottom-topleft-home">
+                <h2>
+                    Services
+                </h2>   
+            </div>
+            
+            <br>
+
+            <div class="content-bottom-left-home">
+                <img src="#" alt="Dog loving">
+                <hr>
+                
+                <h3>
+                        Grooming
+                    </h3>
+                <p>
+                    Bathing and Conditioning <br>
+                    Nail Trimming <br>
+                    Fur Styling <br>
+                    Flea/Tick Treatment <br>
+                </p>
+                <hr>
+            </div>
+
+            <div class="content-bottom-right-home">
+            <img src="#" alt="Cat loving">
+                <hr>
+                <h3>
+                    Boarding
+                </h3>
+                <p>
+                    Balanced Meal <br>
+                    Play Pen <br>
+                    Spacious Rooms
+
+                </p>
+                <hr>
+            </div>
         </div>
+
+        
 
     </main>
 
