@@ -46,7 +46,7 @@
         
     </header>
 
-<div class="main-signup">
+<main class="main-signup">
     <?php if(empty($_SESSION)) : ?>
         <div class="modal fade" id="modal-login" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
@@ -110,7 +110,7 @@
         </form>
 
     </div>
-</div>
+</main>
 
 
     

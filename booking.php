@@ -48,7 +48,7 @@
         
     </header>
 
-    <div class="main-booking">
+    <main class="main-booking">
         <!-- check if session is empty (not logged in)  -->
         <?php if(empty($_SESSION)) : ?>
             <div class="modal fade" id="modal-login" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -79,8 +79,13 @@
             </div>
         <?php endif ?>
 
+        <div class="content-left-booking">
+            <button type="button" class="btn btn-primary btn-lg">
+                
+            </button>
+        </div>
 
-    </div>
+        <div class="content-righ-booking"></div>
 
     
 

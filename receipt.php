@@ -50,7 +50,7 @@
     
 
 <!-- palitan ung name ng main later to the page mismo -->
-    <div class="main-booking">
+    <main class="main-booking">
         <!-- check if session is empty (not logged in)  -->
         <?php if(empty($_SESSION)) : ?>
             <div class="modal fade" id="modal-login" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -82,7 +82,7 @@
         <?php endif ?>
 
 
-    </div>
+    </main>
 
     
 
