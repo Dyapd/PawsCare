@@ -94,9 +94,9 @@
 
             <button type="button" class="btn btn-primary btn-lg" 
             <?php if(empty($_SESSION)) : ?> data-bs-toggle="modal" data-bs-target="#modal-login" 
-                > Book Now
+                > 
                 <?php endif ?>  
-                
+                Book Now
                 <?php if(isset($_SESSION['loggedon'])) : ?>> <a href="booking.php" id="booknowbtn">Book Now</a>  <?php endif ?>
                 
             </button>
