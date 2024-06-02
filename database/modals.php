@@ -37,7 +37,34 @@
         }
     }elseif(isset($_REQUEST['entrySubmission']))
     {
+        /* connection to database */
+        $con = new mysqli("localhost", "root", "", "pawscares_db");
+        if($con->connect_error) 
+        {
+            die("Failed to connect : ".$con->connect_error);
+        }
 
+        /* if connected successfuly then execute this else block */
+        else
+        {
+            $fromdate = $_POST['fromdate'];
+            $todate = $_POST['todate'];
+            $numcats = $_POST['numcats'];
+            $numdogs = $_POST['numdogs'];
+            $userid = $_SESSION['id'];
+
+            $stmt = $con->prepare("INSERT INTO bookings(fromdate, todate, numcats, numdogs, userid) values (?, ?, ?, ?, ?)");
+            $stmt->bind_param("ssssi", $fromdate, $todate, $numcats, $numdogs, $userid);
+            $stmt->execute();
+            ?>
+            <script>
+                alert("User Account Successfully Created!");
+            </script>
+            <?php
+            header("Location:index.php");
+            $stmt->close();
+            $con->close();
+        }
 
     }
 
