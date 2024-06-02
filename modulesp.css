@@ -75,4 +75,41 @@
     text-align: center;
 }
 
+body {
+    font-family: 'Roboto Slab', serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.header-border {
+    background-color: #9d7a42;
+    padding: 20px;
+}
+
+.main-signup {
+    flex: 1; /* This will make the main content take up the remaining space */
+    margin-top: 50px;
+}
+
+.footer-left, .footer-right {
+    margin-top: 20px;
+}
+
+.footer-left img {
+    width: 100px;
+    margin-top: 20px;
+}
+
+.footer-right-container img {
+    width: 24px;
+    margin-right: 10px;
+}
+
+footer {
+    background-color: #424242;
+    width: 100%;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+}
 
