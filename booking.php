@@ -98,24 +98,21 @@
                     <br>
                     
                     <label for="fname" class="menu-form">Check in from:</label> <br>
-                    <input type="date" class="textFields-form" name="fname" required> <br>
+                    <input type="date" class="textFields-form" name="fromdate" required> <br>
                     <br>
                     <label for="mname" class="menu-form">Check out at*:</label> <br>
-                    <input type="date" class="textFields-form" name="mname" required> <br>
+                    <input type="date" class="textFields-form" name="todate" required> <br>
                     <br>
                     <label for="lname" class="menu-form">Number of Cats:</label> <br>
-                    <input type="number" min="0" class="textFields-form" name="lname" required> <br>
+                    <input type="number" min="0" class="textFields-form" name="numcats" required> <br>
                     <br>
                     <label for="lname" class="menu-form">Number of Dogs:</label> <br>
-                    <input type="number" min="0" class="textFields-form" name="lname" required> <br>
+                    <input type="number" min="0" class="textFields-form" name="numdogs" required> <br>
                     <br>
-                    <label for="username" class="menu-form">Username*:</label> <br>
-                    <input type="text" class="textFields-form" name="username" required> <br>
-
 
                     <br>
 
-                    <button class="btn btn-primary" name="entrySubmission">
+                    <button class="btn btn-primary" name="bookform">
                         Book Now!
                     </button>
                 </form> 
