@@ -85,3 +85,32 @@
 
 /* styles for signup */
 
+/* styles for booking */
+
+.content-left-booking h2{
+    color: white;
+}
+
+#bform{
+
+    background-color: white ;
+    border-radius: 2%;
+}
+
+.content-left-booking{
+    width: 60%;
+}
+
+.content-right-booking{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+}
+
+.content-right-form-booking{
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 70%;
+}

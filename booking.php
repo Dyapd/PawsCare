@@ -80,12 +80,52 @@
         <?php endif ?>
 
         <div class="content-left-booking">
-            <button type="button" class="btn btn-primary btn-lg">
-                
-            </button>
+            <h2>
+                Paws Care
+            </h2>
         </div>
 
-        <div class="content-righ-booking"></div>
+        <div class="content-right-booking">
+            
+            <div class="content-right-form-booking">
+                <form name="bookform" action="#" class="book-form" method="post" enctype="multipart/form-data" id = "bform"
+                required>   
+
+                    <h2>
+                        Book your Pet
+                    </h2>
+
+                    <br>
+                    
+                    <label for="fname" class="menu-form">Check in from:</label> <br>
+                    <input type="date" class="textFields-form" name="fname" required> <br>
+                    <br>
+                    <label for="mname" class="menu-form">Check out at*:</label> <br>
+                    <input type="date" class="textFields-form" name="mname" required> <br>
+                    <br>
+                    <label for="lname" class="menu-form">Number of Cats:</label> <br>
+                    <input type="number" min="0" class="textFields-form" name="lname" required> <br>
+                    <br>
+                    <label for="lname" class="menu-form">Number of Dogs:</label> <br>
+                    <input type="number" min="0" class="textFields-form" name="lname" required> <br>
+                    <br>
+                    <label for="username" class="menu-form">Username*:</label> <br>
+                    <input type="text" class="textFields-form" name="username" required> <br>
+
+
+                    <br>
+
+                    <button class="btn btn-primary" name="entrySubmission">
+                        Book Now!
+                    </button>
+                </form> 
+            </div>
+
+
+            
+
+
+        </div>
 
     
 
