@@ -97,22 +97,25 @@
 
                     <br>
                     
-                    <label for="fname" class="menu-form">Check in from:</label> <br>
-                    <input type="date" class="textFields-form" name="fromdate" required> <br>
+                    <label for="fromdate" class="menu-form" >Check in From:</label> <br>
+                    <input type="date" class="textFields-form" name="fromdate" id="datefrom" required> <br>
                     <br>
-                    <label for="mname" class="menu-form">Check out at*:</label> <br>
-                    <input type="date" class="textFields-form" name="todate" required> <br>
+                    <label for="todate" class="menu-form">Check out At*:</label> <br>
+                    <input type="date" class="textFields-form" name="todate" id="dateto" required> <br>
                     <br>
-                    <label for="lname" class="menu-form">Number of Cats:</label> <br>
-                    <input type="number" min="0" class="textFields-form" name="numcats" required> <br>
+                    <label for="numpets" class="menu-form">Number of Pets*:</label> <br>
+                    <input type="number" min="0" class="textFields-form" name="numcats" value="1" required> <br>
                     <br>
-                    <label for="lname" class="menu-form">Number of Dogs:</label> <br>
-                    <input type="number" min="0" class="textFields-form" name="numdogs" required> <br>
+                    <label for="numcats" class="menu-form">Number of Cats:</label> <br>
+                    <input type="number" min="0" class="textFields-form" name="numcats" value="0" required> <br>
+                    <br>
+                    <label for="numdogs" class="menu-form">Number of Dogs:</label> <br>
+                    <input type="number" min="0" class="textFields-form" name="numdogs" value="0" required> <br>
                     <br>
 
                     <br>
 
-                    <button class="btn btn-primary" name="bookform">
+                    <button class="btn btn-primary bookbutton" name="bookform">
                         Book Now!
                     </button>
                 </form> 
@@ -180,6 +183,17 @@
 
 
     <script src="js/bootstrap.js"></script>
+    <script >
+        document.addEventListener('DOMContentLoaded', (event) => {
+        const today = new Date().toISOString().split('T')[0];
+        document.getElementById('datefrom').setAttribute('min', today);
+        });
+
+        document.addEventListener('DOMContentLoaded', (event) => {
+        const today = new Date().toISOString().split('T')[0];
+        document.getElementById('dateto').setAttribute('min', today);
+        });
+    </script>
     <script src=""></script>
 </body>
 

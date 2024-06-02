@@ -99,12 +99,11 @@
             <label for="password" class="menu-form" >Password*:</label> <br>
             <input type="password" class="textFields-form" name="password"
             pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,12}$"
-            title="Please use the format (EN-XXX/EV-XXX/PL-XXX/OB-XXX)"
             required> <br>
 
             <br>
 
-            <button class="btn btn-primary" name="entrySubmission">
+            <button class="btn btn-primary" name="signupform">
                 Submit
             </button>
         </form>
@@ -114,17 +113,23 @@
 
 
     
-    <footer>
+<footer>
         <div class="footer-left">
-            <h4>
-                About Us
-            </h4>
+            <a href="aboutus.php">
+                <h4>
+                    About Us
+                </h4>
+            </a>
+            
 
             <img src="images/pawslogo.png" alt="logo image">
 
+            <a href="contactphp">
             <h4>
                 Contact Us 
             </h4>
+            </a>
+            
         </div>
 
         <div class="footer-right">

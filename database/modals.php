@@ -1,7 +1,7 @@
 <?php
 
    
-    if(isset($_REQUEST['entrySubmission']))
+    if(isset($_REQUEST['signupform']))
     {
         /* connection to database */
         $con = new mysqli("localhost", "root", "", "pawscares_db");
@@ -18,24 +18,45 @@
             $lname = $_POST['lname'];
             $username = $_POST['username'];
             $password = $_POST['password']; 
-            
-            /* This is the main code for putting everything in the database */
 
-
-            $stmt = $con->prepare("INSERT INTO profiles_tbl(fname, mname, lname, username, password) values (?, ?, ?, ?, ?)");
-            $stmt->bind_param("sssss", $fname, $mname, $lname, $username, $password);
+            $stmt = $con->prepare("SELECT id FROM profiles_tbl WHERE username = ? LIMIT 1");
+            $stmt->bind_param("s", $username);
             $stmt->execute();
-            ?>
-            <script>
-                alert("User Account Successfully Created!");
-            </script>
-            <?php
-            header("Location:index.php");
-            $stmt->close();
-            $con->close();
+            $result = $stmt->get_result();
+
+            if($result->num_rows  == 1)
+            {
+                
+                ?>
+                <script>
+                    alert("Username already exists.");
+                </script>
+                <?php
+            }
+
+            else {
+
+                
+                /* This is the main code for putting everything in the database */
+    
+    
+                $stmt = $con->prepare("INSERT INTO profiles_tbl(fname, mname, lname, username, password) values (?, ?, ?, ?, ?)");
+                $stmt->bind_param("sssss", $fname, $mname, $lname, $username, $password);
+                $stmt->execute();
+                ?>
+                <script>
+                    alert("User account successfully created!");
+                </script>
+                <?php
+                header("Location:index.php");
+                $stmt->close();
+                $con->close();
+
+            }
+            
         
         }
-    }elseif(isset($_REQUEST['entrySubmission']))
+    }elseif(isset($_REQUEST['bookform']))
     {
         /* connection to database */
         $con = new mysqli("localhost", "root", "", "pawscares_db");
@@ -47,23 +68,8 @@
         /* if connected successfuly then execute this else block */
         else
         {
-            $fromdate = $_POST['fromdate'];
-            $todate = $_POST['todate'];
-            $numcats = $_POST['numcats'];
-            $numdogs = $_POST['numdogs'];
-            $userid = $_SESSION['id'];
-
-            $stmt = $con->prepare("INSERT INTO bookings(fromdate, todate, numcats, numdogs, userid) values (?, ?, ?, ?, ?)");
-            $stmt->bind_param("ssssi", $fromdate, $todate, $numcats, $numdogs, $userid);
-            $stmt->execute();
-            ?>
-            <script>
-                alert("User Account Successfully Created!");
-            </script>
-            <?php
-            header("Location:index.php");
-            $stmt->close();
-            $con->close();
+            if (isset($_SESSION['loggedon']))
+                echo $_SESSION['loggedon'];
         }
 
     }
