@@ -110,6 +110,36 @@ footer {
     width: 100%;
     padding: 20px;
     position: relative;
-    bottom: 0;
+    bottom: 0px;
+}   
+
+.login-form {
+    border: 2px solid #ccc;
+    padding: 20px; 
+    width: 300px;
+    margin: 0 auto;
 }
 
+.menu-form {
+    display: inline-block;
+    width: 120px;
+}
+
+.textFields-form {
+    width: calc(100% - 5px); 
+}
+
+button.submitbtn{
+        background-color: #9d7a42;
+        position: relative;
+        left: 20px;
+        bottom: 30px;
+    }
+
+.signup-heading{
+    font-size: 24px;
+    font-weight: bold; 
+    text-align: center; 
+    color: #333; 
+    margin-bottom: 20px;
+}

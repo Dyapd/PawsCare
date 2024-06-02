@@ -4,7 +4,7 @@
   $password = $_POST['password'];
   
 
-  $con = new mysqli("localhost", "root", "", "sdpdatabase");
+  $con = new mysqli("localhost", "Kenshin", "Casas", "sdpdatabase");
   if($con->connect_error) 
   {
     die("Failed to connect : ".$con->connect_error);

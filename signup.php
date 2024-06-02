@@ -77,9 +77,9 @@
     <?php endif ?>
 
     <div class="container">
-        <h1>
-            Signup Form
-        </h1>
+    <h1 id="signup-heading">
+        Signup Form
+    </h1>
         <form name="entryForm" action="#" class="login-form" method="post" enctype="multipart/form-data"
         required>    
             <br>
@@ -104,12 +104,12 @@
 
 
 
-            <label for="imgrep" class="menu-form">Photo:</label>
+            <label for="imgrep" class="menu-form"  >Photo:</label>
             <input type="file" id="fileInput" class="form-control inImg-form" name="img" accept=".jpg, .jpeg, .png"> <br>   
 
             <br>
 
-            <button class="btn btn-primary" name="entrySubmission">
+            <button class="btn btn-primary submitbtn" name="entrySubmission">
                 Submit
             </button>
         </form>
