@@ -167,14 +167,13 @@
                     About Us
                 </h4>
             </a>
-            
 
             <img src="images/pawslogo.png" alt="logo image">
-
+            
             <a href="contactphp">
-            <h4>
-                Contact Us 
-            </h4>
+                <h4>
+                    Contact Us 
+                </h4>
             </a>
             
         </div>

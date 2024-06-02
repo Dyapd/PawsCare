@@ -13,6 +13,9 @@
     }
     .left-top-home{
         width: 100%;
+        min-height: 60vb;
+        background-color: #343935;
+        border: rebeccapurple;
     }
     .right-top-home{
         width: 100%;

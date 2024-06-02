@@ -97,7 +97,7 @@
             <input type="text" class="textFields-form" name="username" required> <br>
 
             <label for="password" class="menu-form" >Password*:</label> <br>
-            <input type="text" class="textFields-form" name="password"
+            <input type="password" class="textFields-form" name="password"
             pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,12}$"
             title="Please use the format (EN-XXX/EV-XXX/PL-XXX/OB-XXX)"
             required> <br>

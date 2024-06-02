@@ -77,6 +77,17 @@ footer{
     position: absolute;
     color: #AF8C53;
 }
+
+.footer-left a{
+    text-decoration: none;
+    color: #9c8156;
+}
+
+.footer-left a:hover{
+    color: #AF8C53;
+}
+
+
 .footer-left{
     
     display: flex;
@@ -176,9 +187,32 @@ footer{
     justify-content: space-evenly;
     margin: auto;
     flex-wrap: wrap;
-}
-
-.main-home{
     color: #AF8C53;
 }
 
+
+
+/* style for main of booking */
+
+.main-booking{
+    display: flex;
+    min-height: calc(100vh - 265px);
+    width: 100%;
+    justify-content: space-evenly;
+    margin: auto;
+    flex-wrap: wrap;
+    color: #AF8C53;
+}
+
+
+/* main accountuser */
+
+.main-accountuser{
+    display: flex;
+    min-height: calc(100vh - 265px);
+    width: 100%;
+    justify-content: space-evenly;
+    margin: auto;
+    flex-wrap: wrap;
+    color: #AF8C53;
+}
