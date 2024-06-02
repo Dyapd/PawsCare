@@ -92,8 +92,13 @@
                 friends
             </h2>
 
-            <button type="button" class="btn btn-primary btn-lg">
-                Book Now
+            <button type="button" class="btn btn-primary btn-lg" 
+            <?php if(empty($_SESSION)) : ?> data-bs-toggle="modal" data-bs-target="#modal-login" 
+                > Book Now
+                <?php endif ?>  
+                
+                <?php if(isset($_SESSION['loggedon'])) : ?>> <a href="booking.php" id="booknowbtn">Book Now</a>  <?php endif ?>
+                
             </button>
         </div>
 
@@ -165,7 +170,7 @@
             
 
             <img src="images/pawslogo.png" alt="logo image">
-            
+
             <a href="contactphp">
             <h4>
                 Contact Us 
