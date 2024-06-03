@@ -170,9 +170,7 @@
     width: 80%;
 }
 
-.textarea-form{
-    height: 150px;
-}
+
 
 .content-right-form-booking{
     margin-top: auto;
@@ -187,19 +185,38 @@
 
 .menu-form{
     margin-left: 5%;
-    width: 50%;
+    width: 15%;
 }
 
 .textFields-form{
     margin-top: .5%;
     margin-left: 5%;
-    width: 50%;
+    width: 20%;
 }
 
+
 .textarea-form{
+    height: 150px;
     width: 90%;
     margin-left: 5%;
     margin-right: 5%;
+}
+
+.gform{
+    width: 20%;
+    height: 20px;
+}
+
+input[type=checkbox] {
+    transform: scale(1.5);
+}
+
+.checkboxg{
+    width: 10px;
+}
+
+.mform{
+    width: 100%;
 }
 
 .bookbutton{

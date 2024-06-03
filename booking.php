@@ -94,16 +94,28 @@
                     
                     <label for="fromdate" class="menu-form" >Check in From:</label> 
                     <input type="date" class="textFields-form" name="fromdate" id="datefrom" required> 
-                    <label for="todate" class="menu-form">Check out At*:</label> <br>
-                    <input type="date" class="textFields-form" name="todate" id="dateto" required> <br>
+                    <label for="todate" class="menu-form">Check out At*:</label> 
+                    <input type="date" class="textFields-form" name="todate" id="dateto" required> 
                     <br>
-                    <label for="numcats" class="menu-form">Number of Cats:</label> <br>
+                    <br>
+
+
+                    <label for="numcats" class="menu-form">Number of Cats:</label> 
                     <input type="number" min="0" class="textFields-form" name="numcats" value="0" required>
-                    <label for="numdogs" class="menu-form">Number of Dogs:</label> <br>
-                    <input type="number" min="0" class="textFields-form" name="numdogs" value="0" required> <br>
+                    <label for="numdogs" class="menu-form">Number of Dogs:</label>
+                    <input type="number" min="0" class="textFields-form" name="numdogs" value="0" required> 
+
                     <br>
-                    <label for="numdogs" class="menu-form ">Additional Instructions - (Optional)</label> <br>
-                    <textarea name="reporte" id="report" rows="10" class="textarea-form" name="report"></textarea> <br>
+                    <br>
+                    
+                    <label for="groom" class="menu-form gform">Grooming Service:</label> 
+                    <input type="checkbox" class="checkboxg" name="groom"> 
+
+                    <br>
+                    <br>
+                    <label for="numdogs" class="menu-form mform">Additional Instructions - (Optional)</label> <br>
+                    <textarea name="reporte" id="report" rows="10" class="textarea-form" name="report"></textarea> 
+                    <br>
                     <br>
 
                     <button class="btn btn-primary bookbutton" name="bookform">
