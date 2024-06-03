@@ -79,11 +79,6 @@
             </div>
         <?php endif ?>
 
-        <div class="content-left-booking">
-            <h2>
-                Paws Care
-            </h2>
-        </div>
 
         <div class="content-right-booking">
             

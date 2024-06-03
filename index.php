@@ -105,7 +105,7 @@
                 friends
             </h2>
 
-            <button type="button" class="btn btn-primary btn-lg" 
+            <button type="button" class="btn btn-primary btn-lg homebutton" 
             <?php if(empty($_SESSION)) : ?> data-bs-toggle="modal" data-bs-target="#modal-login" 
                 > 
                 <?php endif ?>  
