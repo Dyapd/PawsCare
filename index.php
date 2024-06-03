@@ -92,8 +92,13 @@
                 friends
             </h2>
 
-            <button type="button" class="btn btn-primary btn-lg">
+            <button type="button" class="btn btn-primary btn-lg" 
+            <?php if(empty($_SESSION)) : ?> data-bs-toggle="modal" data-bs-target="#modal-login" 
+                > 
+                <?php endif ?>  
                 Book Now
+                <?php if(isset($_SESSION['loggedon'])) : ?>> <a href="booking.php" id="booknowbtn">Book Now</a>  <?php endif ?>
+                
             </button>
         </div>
 
@@ -157,15 +162,20 @@
     
     <footer>
         <div class="footer-left">
-            <h4>
-                About Us
-            </h4>
+            <a href="aboutus.php">
+                <h4>
+                    About Us
+                </h4>
+            </a>
 
             <img src="images/pawslogo.png" alt="logo image">
-
-            <h4>
-                Contact Us 
-            </h4>
+            
+            <a href="contactphp">
+                <h4>
+                    Contact Us 
+                </h4>
+            </a>
+            
         </div>
 
         <div class="footer-right">

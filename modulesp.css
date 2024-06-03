@@ -13,6 +13,9 @@
     }
     .left-top-home{
         width: 100%;
+        min-height: 60vb;
+        background-color: #343935;
+        border: rebeccapurple;
     }
     .right-top-home{
         width: 100%;
@@ -75,71 +78,39 @@
     text-align: center;
 }
 
-body {
-    font-family: 'Roboto Slab', serif;
+#booknowbtn{
+    text-decoration: none;
+    color: white;
+}
+
+/* styles for signup */
+
+/* styles for booking */
+
+.content-left-booking h2{
+    color: white;
+}
+
+#bform{
+
+    background-color: white ;
+    border-radius: 2%;
+}
+
+.content-left-booking{
+    width: 60%;
+}
+
+.content-right-booking{
     display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-.header-border {
-    background-color: #9d7a42;
-    padding: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
 }
 
-.main-signup {
-    flex: 1; /* This will make the main content take up the remaining space */
-    margin-top: 50px;
-}
-
-.footer-left, .footer-right {
-    margin-top: 20px;
-}
-
-.footer-left img {
-    width: 100px;
-    margin-top: 20px;
-}
-
-.footer-right-container img {
-    width: 24px;
-    margin-right: 10px;
-}
-
-footer {
-    background-color: #424242;
-    width: 100%;
-    padding: 20px;
-    position: relative;
-    bottom: 0px;
-}   
-
-.login-form {
-    border: 2px solid #ccc;
-    padding: 20px; 
-    width: 300px;
-    margin: 0 auto;
-}
-
-.menu-form {
-    display: inline-block;
-    width: 120px;
-}
-
-.textFields-form {
-    width: calc(100% - 5px); 
-}
-
-button.submitbtn{
-        background-color: #9d7a42;
-        position: relative;
-        left: 20px;
-        bottom: 30px;
-    }
-
-.signup-heading{
-    font-size: 24px;
-    font-weight: bold; 
-    text-align: center; 
-    color: #333; 
-    margin-bottom: 20px;
+.content-right-form-booking{
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 70%;
 }

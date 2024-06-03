@@ -4,14 +4,14 @@
   $password = $_POST['password'];
   
 
-  $con = new mysqli("localhost", "Kenshin", "Casas", "sdpdatabase");
+  $con = new mysqli("localhost", "root", "", "pawscares_db");
   if($con->connect_error) 
   {
     die("Failed to connect : ".$con->connect_error);
   }
   else 
   {
-    $stmt = $con->prepare("SELECT * from userdb where username = ?");
+    $stmt = $con->prepare("SELECT * from profiles_tbl where username = ?");
     $stmt->bind_param("s", $username);
     $stmt->execute();
     $stmt_result = $stmt->get_result();

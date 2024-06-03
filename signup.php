@@ -1,7 +1,6 @@
 <?php
     session_start();
     include 'database/modals.php';
-
 ?>
 
 <!DOCTYPE html>
@@ -46,7 +45,7 @@
         
     </header>
 
-<div class="main-signup">
+<main class="main-signup">
     <?php if(empty($_SESSION)) : ?>
         <div class="modal fade" id="modal-login" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
@@ -97,15 +96,10 @@
             <input type="text" class="textFields-form" name="username" required> <br>
 
             <label for="password" class="menu-form" >Password*:</label> <br>
-            <input type="text" class="textFields-form" name="password"
-            pattern="(EN|PL|OB|EV)-\d\d\d"
+            <input type="password" class="textFields-form" name="password"
+            pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,12}$"
             title="Please use the format (EN-XXX/EV-XXX/PL-XXX/OB-XXX)"
             required> <br>
-
-
-
-            <label for="imgrep" class="menu-form"  >Photo:</label>
-            <input type="file" id="fileInput" class="form-control inImg-form" name="img" accept=".jpg, .jpeg, .png"> <br>   
 
             <br>
 
@@ -115,7 +109,7 @@
         </form>
 
     </div>
-</div>
+</main>
 
 
     
