@@ -167,7 +167,11 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    width: 40%;
+    width: 80%;
+}
+
+.textarea-form{
+    height: 150px;
 }
 
 .content-right-form-booking{
@@ -178,8 +182,7 @@
 
 .content-right-form-booking h2{
     margin: auto;
-    width: 50%;
-    margin-top: .5%;
+    width: 25%;
 }
 
 .menu-form{

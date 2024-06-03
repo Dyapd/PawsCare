@@ -72,17 +72,31 @@
             
                 $fromdate = $_POST['fromdate'];
                 $todate = $_POST['todate'];
-                $numpets = $_POST['numpets'];
                 $numcats = $_POST['numcats'];
                 $numdogs = $_POST['numdogs']; 
                 $username = $_SESSION['loggedon'];
 
-                $stmt = $con->prepare("INSERT INTO bookings_tbl(fromdate, todate, numpets, numcats, numdogs, username) values (?, ?, ?, ?, ?, ?)");
-                $stmt->bind_param("ssiiis", $fromdate, $todate, $numpets, $numcats, $numdogs, $_SESSION['loggedon']);
-                $stmt->execute();
-                header("Location:receipt.php");
-                $stmt->close();
-                $con->close();
+                $numpets = $numcats + $numdogs;
+
+                if ($numpets == 0){
+                    {
+                
+                        ?>
+                        <script>
+                            alert("There can't be 0 pets!.");
+                        </script>
+                        <?php
+                    }
+                }
+                else{
+                    $stmt = $con->prepare("INSERT INTO bookings_tbl(fromdate, todate, numpets, numcats, numdogs, username) values (?, ?, ?, ?, ?, ?)");
+                    $stmt->bind_param("ssiiis", $fromdate, $todate, $numpets, $numcats, $numdogs, $_SESSION['loggedon']);
+                    $stmt->execute();
+                    header("Location:receipt.php");
+                    $stmt->close();
+                    $con->close();
+                }
+                
         }
 
     }
