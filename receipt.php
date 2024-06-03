@@ -102,8 +102,9 @@
                 <h6>Total: &emsp;&emsp;&emsp;&emsp;&emsp;&emsp; P2,110</h6>
 
                 <button class="btn btn-primary submit-btn receiptbutton" name="">
-                    <a href="accountuser.php">Submit</a>
+                <a href="accountuser.php?username='<?php echo $_SESSION['loggedon']  ?>'">Submit</a>
                 </button>
+                
 
             </div>
         </div>

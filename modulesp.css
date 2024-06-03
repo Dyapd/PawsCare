@@ -328,7 +328,7 @@ input[type=checkbox] {
     width: 100%;
 }
 .content-receipt{
-    
+    position: relative;
     width: 25%;
     height: 50%;
     background-color: white ;
@@ -345,7 +345,11 @@ input[type=checkbox] {
 
 .receiptbutton{
     width: 50%;
-    align-self: flex-end;
+    height: 40px;
+    position:absolute;
+    margin-left: 25%;
+    margin-bottom: 5px;
+    bottom: 0;
 }
 
 .receiptbutton a{
