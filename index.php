@@ -116,7 +116,7 @@
         </div>
 
         <div class="right-top-home">
-            <img src="#" alt="#">
+            <img src="images/catsdogs.jpg" alt="#">
         </div>
 
         <div class="content-middle-home">

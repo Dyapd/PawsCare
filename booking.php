@@ -112,7 +112,8 @@
                     <label for="numdogs" class="menu-form">Number of Dogs:</label> <br>
                     <input type="number" min="0" class="textFields-form" name="numdogs" value="0" required> <br>
                     <br>
-
+                    <label for="numdogs" class="menu-form">Additional Instructions - (Optional)</label> <br>
+                    <textarea name="reporte" id="report" rows="10" class="textarea-form" name="report" required></textarea> <br>
                     <br>
 
                     <button class="btn btn-primary bookbutton" name="bookform">

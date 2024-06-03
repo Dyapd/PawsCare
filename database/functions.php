@@ -16,8 +16,8 @@
         $username = $_REQUEST['username'];
         $sql = "SELECT * FROM `profiles_tbl` WHERE username = $username";
         $query = mysqli_query($conn, $sql);
+
+        $querya  = "SELECT * FROM `bookings_tbl` WHERE username = $username";
+        $result = mysqli_query($conn, $querya);
     }
-
-
-
 ?>

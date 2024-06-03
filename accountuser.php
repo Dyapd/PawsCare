@@ -1,10 +1,6 @@
 <?php
     session_start();
     include 'database/modals.php';
-
-?>
-
-<?php
     include 'database/functions.php';
 ?>
 
@@ -14,7 +10,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="baseb\p.css">
+    <link rel="stylesheet" href="basep.css">
     <link rel="stylesheet" href="layoutsp.css">
     <link rel="stylesheet" href="modulesp.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -83,14 +79,44 @@
     <?php endif ?>
 
     
+    <!-- this php bit of code displays the user's full name -->
     <?php foreach($query as $q): ?>
         
         <div class="content-top-accountuser">
-            <h1><?php echo $q['fname'], $q['mname'], $q['lname']; ?> </h1>
+            <h2>
+                User Profile: 
+            </h2>
+
+            <h2><?php echo $q['fname'] ?> <?php echo  $q['mname'] ?> <?php echo  $q['lname'] ?></h2>
         </div>
 
-
     <?php endforeach; ?>
+
+    <div class="content-middle-accountuser">
+        <h3>
+            Booked List:
+        </h3>
+        <table id="example" class="table table-hover table-bordered table-success masterlist" style="width:100%">
+            <thead>
+                <tr class="table-dark">
+                    <th>Number of Pets</th>
+                    <th>Check In</th>
+                    <th>Check out</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <?php while($row = mysqli_fetch_array($result)):; ?>
+                    <td><?php echo $row[3];?></td>
+                    <td><?php echo $row[1];?></td>
+                    <td><?php echo $row[2];?></td>  
+                </tr>
+                    <?php endwhile;?>
+            </tbody>
+        </table>
+    </div>
+    <!-- this table with php displays the bookings the user had made -->
+    
 
     
     </main>
