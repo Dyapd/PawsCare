@@ -83,10 +83,6 @@
     <?php foreach($query as $q): ?>
         
         <div class="content-top-accountuser">
-            <h2>
-                User Profile: 
-            </h2>
-
             <h2><?php echo $q['fname'] ?> <?php echo  $q['mname'] ?> <?php echo  $q['lname'] ?></h2>
         </div>
 
