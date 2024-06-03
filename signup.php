@@ -1,6 +1,7 @@
 <?php
     session_start();
     include 'database/modals.php';
+
 ?>
 
 <!DOCTYPE html>
@@ -76,9 +77,9 @@
     <?php endif ?>
 
     <div class="container">
-    <h1 id="signup-heading">
-        Signup Form
-    </h1>
+        <h1>
+            Signup Form
+        </h1>
         <form name="entryForm" action="#" class="login-form" method="post" enctype="multipart/form-data"
         required>    
             <br>
