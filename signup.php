@@ -76,28 +76,27 @@
         </div>
     <?php endif ?>
 
-    <div class="container primary-signup signup-heading">
+    <div class="container">
         <h1>
             Signup Form
         </h1>
-        <form name="entryForm" action="#" class="login-form" method="post" enctype="multipart/form-data"
-        required>    
+        <form name="entryForm" action="#" class="login-form" method="post" enctype="multipart/form-data" required>    
             <br>
 
             <label for="fname" class="menu-form">First Name*:</label> <br>
-            <input type="text" class="textFields-form" name="fname" required> <br>
+            <input type="text" class="textFields-form register" name="fname" required> <br>
 
             <label for="mname" class="menu-form">Middle Name*:</label> <br>
-            <input type="text" class="textFields-form" name="mname" required> <br>
+            <input type="text" class="textFields-form register" name="mname" required> <br>
 
             <label for="lname" class="menu-form">Last Name*:</label> <br>
-            <input type="text" class="textFields-form" name="lname" required> <br>
+            <input type="text" class="textFields-form register" name="lname" required> <br>
 
             <label for="username" class="menu-form">Username*:</label> <br>
-            <input type="text" class="textFields-form" name="username" required> <br>
+            <input type="text" class="textFields-form register" name="username" required> <br>
 
             <label for="password" class="menu-form" >Password*:</label> <br>
-            <input type="password" class="textFields-form" name="password"
+            <input type="password" class="textFields-form register" name="password"
             pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,12}$"
             required> <br>
 
