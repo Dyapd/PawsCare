@@ -16,6 +16,7 @@
             $fname = $_POST['fname'];
             $mname = $_POST['mname'];
             $lname = $_POST['lname'];
+            $phone = $_POST['phone'];
             $username = $_POST['username'];
             $password = $_POST['password']; 
 
@@ -40,8 +41,8 @@
                 /* This is the main code for putting everything in the database */
     
     
-                $stmt = $con->prepare("INSERT INTO profiles_tbl(fname, mname, lname, username, password) values (?, ?, ?, ?, ?)");
-                $stmt->bind_param("sssss", $fname, $mname, $lname, $username, $password);
+                $stmt = $con->prepare("INSERT INTO profiles_tbl(fname, mname, lname, phone ,username, password) values (?, ?, ?, ?, ?, ?)");
+                $stmt->bind_param("ssssss", $fname, $mname, $lname, $phone, $username, $password);
                 $stmt->execute();
                 ?>
                 <script>

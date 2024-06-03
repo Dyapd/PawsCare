@@ -89,10 +89,19 @@
                 <label for="mname" class="register-label">Middle Name*:</label>
                 <input type="text" class="textFields-form register" name="mname" id="mname" required>
             </div>
+            
 
             <div class="input-group">
                 <label for="lname" class="register-label">Last Name*:</label>
                 <input type="text" class="textFields-form register" name="lname" id="lname" required>
+            </div>
+
+            <div class="input-group">
+                <label for="phone" class="register-label">Phone Number*:</label>
+                <input type="text" class="textFields-form register" name="phone" id="phone" 
+                pattern="[09][0-9]{10}"
+                title = "Invalid Phone Number"
+                required>
             </div>
 
             <div class="input-group">
