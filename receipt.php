@@ -50,7 +50,7 @@
     
 
 <!-- palitan ung name ng main later to the page mismo -->
-    <main class="main-booking">
+    <main class="main-receipt">
         <!-- check if session is empty (not logged in)  -->
         <?php if(empty($_SESSION)) : ?>
             <div class="modal fade" id="modal-login" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -81,9 +81,33 @@
             </div>
         <?php endif ?>
 
+        
+        <div class="container-receipt">
+            <div class="content-receipt">
+                <h4>
+                    Payment
+                    <hr>
+                </h4>
+                
+                <br>
+                
+                <h6>
+                    Pet Boarding: &emsp; P1,610.00 
+                    <br>
+                    Grooming: &emsp;&emsp;&emsp; P500.00
+                </h6>
 
-    </main>
+                <hr>
 
+                <h6>Total: &emsp;&emsp;&emsp;&emsp;&emsp;&emsp; P2,110</h6>
+
+                <button class="btn btn-primary submit-btn receiptbutton" name="">
+                    <a href="accountuser.php">Submit</a>
+                </button>
+
+            </div>
+        </div>
+        
     
 
     </main>

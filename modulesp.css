@@ -310,3 +310,37 @@ input[type=checkbox] {
 .content-middle-accountuser{
     width: 80%;
 }
+
+/* styles for receipt */
+.container-receipt{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.content-receipt{
+    
+    width: 25%;
+    height: 50%;
+    background-color: white ;
+    border-radius: 2%;
+}
+
+.content-receipt h4{
+    margin-left: 35%;
+}
+
+.content-receipt h6{
+    margin-left: 5%;
+}
+
+.receiptbutton{
+    width: 50%;
+    align-self: flex-end;
+}
+
+.receiptbutton a{
+    text-decoration: none;
+    color: white;
+}

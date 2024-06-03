@@ -220,3 +220,18 @@ footer{
     flex-wrap: wrap;
     color: #AF8C53;
 }
+
+/* main receipt */
+
+.main-receipt{
+    display: flex;
+    min-height: calc(125vh - 300px);
+    width: 100%;
+    justify-content: space-evenly;
+    margin: auto;
+    flex-wrap: wrap;
+    color: #AF8C53;
+    background-image: url('images/wallpaperdog.jfif');
+    background-repeat: no-repeat;
+    background-size: cover; 
+}

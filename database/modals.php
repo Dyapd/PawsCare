@@ -76,7 +76,7 @@
                 $numdogs = $_POST['numdogs']; 
                 $username = $_SESSION['loggedon'];
                 $numpets = $numcats + $numdogs;
-                $groomingservice = $_POST['groomingservice'];
+                $groomingservice = intval($_POST['groomingservice']);
                 $info = $_POST['info'];
 
                 if ($numpets == 0){
@@ -91,7 +91,7 @@
                 }
                 else if ($groomingservice != null || $info != ''){
                     $stmt = $con->prepare("INSERT INTO bookings_tbl(fromdate, todate, numpets, numcats, numdogs,  groomingservice, info, username) values (?, ?, ?, ?, ?, ?, ?, ?)");
-                    $stmt->bind_param("ssiiiiss", $fromdate, $todate, $numpets, $numcats, $numdogs, $groomingservice, $info, $_SESSION['loggedon'], );
+                    $stmt->bind_param("ssiiiiss", $fromdate, $todate, $numpets, $numcats, $numdogs, $groomingservice, $info, $_SESSION['loggedon'] );
                     $stmt->execute();
                     header("Location:receipt.php");
                     $stmt->close();
