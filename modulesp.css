@@ -114,7 +114,38 @@
 }
 
 /* styles for signup */
+.login-form {
+    border: 2px solid #ccc;
+    padding: 20px; 
+    width: 300px;
+    margin: 0 auto;
+}
 
+.menu-form {
+    display: inline-block;
+    width: 120px;
+}
+
+.textFields-form {
+    width: calc(100% - 50px); 
+}
+
+.submit-btn{
+        background-color: #9d7a42;
+        position: relative;
+        
+    }
+.signup-form{
+        text-align: center
+    }
+
+.signup-heading{
+    font-size: 24px;
+    font-weight: bold; 
+    text-align: center; 
+    color: #333; 
+    margin-bottom: 20px;
+}
 /* styles for booking */
 
 .content-left-booking h2{

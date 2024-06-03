@@ -76,7 +76,7 @@
         </div>
     <?php endif ?>
 
-    <div class="container">
+    <div class="container primary-signup signup-heading">
         <h1>
             Signup Form
         </h1>
@@ -103,7 +103,7 @@
 
             <br>
 
-            <button class="btn btn-primary" name="signupform">
+            <button class="btn btn-primary submit-btn" name="signupform">
                 Submit
             </button>
         </form>
