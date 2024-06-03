@@ -77,37 +77,41 @@
     <?php endif ?>
 
     <div class="container">
-        <h1>
-            Signup Form
-        </h1>
-        <form name="entryForm" action="#" class="login-form" method="post" enctype="multipart/form-data" required>    
-            <br>
+    
+    <form name="entryForm" action="#" class="login-form" method="post" enctype="multipart/form-data" required>    
+        <h1 class="sign">Signup Form</h1>
+        <div class="input-group">
+            <label for="fname" class="register-label">First Name*:</label>
+            <input type="text" class="textFields-form register" name="fname" id="fname" required>
+        </div>
 
-            <label for="fname" class="menu-form">First Name*:</label> <br>
-            <input type="text" class="textFields-form register" name="fname" required> <br>
+        <div class="input-group">
+            <label for="mname" class="register-label">Middle Name*:</label>
+            <input type="text" class="textFields-form register" name="mname" id="mname" required>
+        </div>
 
-            <label for="mname" class="menu-form">Middle Name*:</label> <br>
-            <input type="text" class="textFields-form register" name="mname" required> <br>
+        <div class="input-group">
+            <label for="lname" class="register-label">Last Name*:</label>
+            <input type="text" class="textFields-form register" name="lname" id="lname" required>
+        </div>
 
-            <label for="lname" class="menu-form">Last Name*:</label> <br>
-            <input type="text" class="textFields-form register" name="lname" required> <br>
+        <div class="input-group">
+            <label for="username" class="register-label">Username*:</label>
+            <input type="text" class="textFields-form register" name="username" id="username" required>
+        </div>
 
-            <label for="username" class="menu-form">Username*:</label> <br>
-            <input type="text" class="textFields-form register" name="username" required> <br>
+        <div class="input-group">
+            <label for="password" class="register-label">Password*:</label>
+            <input type="password" class="textFields-form register" name="password" id="password"
+                pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,12}$"
+                title="Password must be 8-12 characters long and include at least one lowercase letter, one uppercase letter, one digit, and one special character"
+                required>
+        </div>
 
-            <label for="password" class="menu-form" >Password*:</label> <br>
-            <input type="password" class="textFields-form register" name="password"
-            pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,12}$"
-            required> <br>
+        <button class="submit-btn" name="signupform">Submit</button>
+    </form>
+</div>
 
-            <br>
-
-            <button class="btn btn-primary submit-btn" name="signupform">
-                Submit
-            </button>
-        </form>
-
-    </div>
 </main>
 
 
