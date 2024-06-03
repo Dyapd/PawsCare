@@ -4,6 +4,19 @@
 
 ?>
 
+<?php
+
+    define('DB_SERVER', 'localhost');
+    define('DB_USERNAME', 'root');
+    define('DB_PASSWORD', '');
+    define('DB_NAME', 'pawscares_db');
+
+    $conn = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
+
+    $query = "SELECT * FROM `profiles_tbl`";
+    $result = mysqli_query($conn, $query);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,7 +53,7 @@
                 <!-- check if session has loggedon set if so then is logged in -->
                 <?php if(isset($_SESSION['loggedon'])) : ?>
                     <a href="booking.php">Book</a>
-                    <a href="accountuser.php">Profile</a>
+                    <a href="accountuser.php?username='<?php echo $_SESSION['loggedon']  ?>'">Profile</a>
                     <a href="database/logout.php" >Signout</a>
                 <?php endif ?>
             </div>
@@ -92,7 +105,7 @@
                 friends
             </h2>
 
-            <button type="button" class="btn btn-primary btn-lg" 
+            <button type="button" class="btn btn-primary btn-lg homebutton" 
             <?php if(empty($_SESSION)) : ?> data-bs-toggle="modal" data-bs-target="#modal-login" 
                 > 
                 <?php endif ?>  
@@ -103,7 +116,7 @@
         </div>
 
         <div class="right-top-home">
-            <img src="#" alt="#">
+            <img src="images/catsdogs.jpg" alt="#">
         </div>
 
         <div class="content-middle-home">

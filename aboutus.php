@@ -40,7 +40,7 @@
                 <!-- check if session has loggedon set if so then is logged in -->
                 <?php if(isset($_SESSION['loggedon'])) : ?>
                     <a href="booking.php">Book</a>
-                    <a href="accountuser.php">Profile</a>
+                    <a href="accountuser.php?username='<?php echo $_SESSION['loggedon']  ?>'">Profile</a>
                     <a href="database/logout.php" >Signout</a>
                 <?php endif ?>
             </div>

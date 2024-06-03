@@ -20,7 +20,7 @@
       $data = $stmt_result->fetch_assoc();
       if($data['password'] === $password)
       {
-        $_SESSION['loggedon'] = '$username';
+        $_SESSION['loggedon'] = $username;
         header("Location:../index.php");
       }
       else

@@ -40,7 +40,7 @@
                 <!-- check if session has loggedon set if so then is logged in -->
                 <?php if(isset($_SESSION['loggedon'])) : ?>
                     <a href="booking.php">Book</a>
-                    <a href="accountuser.php">Profile</a>
+                    <a href="accountuser.php?username='<?php echo $_SESSION['loggedon']  ?>'">Profile</a>
                     <a href="database/logout.php" >Signout</a>
                 <?php endif ?>
             </div>
@@ -79,11 +79,6 @@
             </div>
         <?php endif ?>
 
-        <div class="content-left-booking">
-            <h2>
-                Paws Care
-            </h2>
-        </div>
 
         <div class="content-right-booking">
             
@@ -97,25 +92,26 @@
 
                     <br>
                     
-                    <label for="fname" class="menu-form">Check in from:</label> <br>
-                    <input type="date" class="textFields-form" name="fname" required> <br>
+                    <label for="fromdate" class="menu-form" >Check in From:</label> <br>
+                    <input type="date" class="textFields-form" name="fromdate" id="datefrom" required> <br>
                     <br>
-                    <label for="mname" class="menu-form">Check out at*:</label> <br>
-                    <input type="date" class="textFields-form" name="mname" required> <br>
+                    <label for="todate" class="menu-form">Check out At*:</label> <br>
+                    <input type="date" class="textFields-form" name="todate" id="dateto" required> <br>
                     <br>
-                    <label for="lname" class="menu-form">Number of Cats:</label> <br>
-                    <input type="number" min="0" class="textFields-form" name="lname" required> <br>
+                    <label for="numpets" class="menu-form">Number of Pets*:</label> <br>
+                    <input type="number" min="0" class="textFields-form" name="numpets" value="1" required> <br>
                     <br>
-                    <label for="lname" class="menu-form">Number of Dogs:</label> <br>
-                    <input type="number" min="0" class="textFields-form" name="lname" required> <br>
+                    <label for="numcats" class="menu-form">Number of Cats:</label> <br>
+                    <input type="number" min="0" class="textFields-form" name="numcats" value="0" required> <br>
                     <br>
-                    <label for="username" class="menu-form">Username*:</label> <br>
-                    <input type="text" class="textFields-form" name="username" required> <br>
+                    <label for="numdogs" class="menu-form">Number of Dogs:</label> <br>
+                    <input type="number" min="0" class="textFields-form" name="numdogs" value="0" required> <br>
+                    <br>
+                    <label for="numdogs" class="menu-form">Additional Instructions - (Optional)</label> <br>
+                    <textarea name="reporte" id="report" rows="10" class="textarea-form" name="report" required></textarea> <br>
+                    <br>
 
-
-                    <br>
-
-                    <button class="btn btn-primary" name="entrySubmission">
+                    <button class="btn btn-primary bookbutton" name="bookform">
                         Book Now!
                     </button>
                 </form> 
@@ -183,6 +179,17 @@
 
 
     <script src="js/bootstrap.js"></script>
+    <script >
+        document.addEventListener('DOMContentLoaded', (event) => {
+        const today = new Date().toISOString().split('T')[0];
+        document.getElementById('datefrom').setAttribute('min', today);
+        });
+
+        document.addEventListener('DOMContentLoaded', (event) => {
+        const today = new Date().toISOString().split('T')[0];
+        document.getElementById('dateto').setAttribute('min', today);
+        });
+    </script>
     <script src=""></script>
 </body>
 

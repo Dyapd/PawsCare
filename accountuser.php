@@ -1,7 +1,7 @@
 <?php
     session_start();
     include 'database/modals.php';
-
+    include 'database/functions.php';
 ?>
 
 <!DOCTYPE html>
@@ -17,12 +17,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
     <title>
-        Paws Cares
+        User Profile
     </title>
 </head>
 <body>
-
-
     <header>
         <div class="header-border">
             <div class="logo-img">
@@ -40,54 +38,89 @@
                 <!-- check if session has loggedon set if so then is logged in -->
                 <?php if(isset($_SESSION['loggedon'])) : ?>
                     <a href="booking.php">Book</a>
-                    <a href="accountuser.php">Profile</a>
+                    <a href="accountuser.php?username='<?php echo $_SESSION['loggedon']  ?>'">Profile</a>
                     <a href="database/logout.php" >Signout</a>
                 <?php endif ?>
             </div>
         </div>
         
     </header>
-    
 
-<!-- palitan ung name ng main later to the page mismo -->
     <main class="main-accountuser">
-        <!-- check if session is empty (not logged in)  -->
-        <?php if(empty($_SESSION)) : ?>
-            <div class="modal fade" id="modal-login" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <img src="images/pawslogo.png" alt="Logo" class="modal-logo">
-                            <h1 class="modal-title fs-5" id="exampleModalLabel">Login</h1>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body"> 
-                            <form id="loginform" action="database/login.php" method="post"> <!-- put php here -->
-                                <p>
-                                Username:
-                                </p>
-                                <input type="text" id="username" name="username" required>
-                                <p>
-                                Password:
-                                </p>
-                                <input type="password" id="password" name="password" required>
-                            </form>
-                        </div>
-                        <div class="modal-footer">
-                            <button class="btn btn-primary" form="loginform" name="login">Login</button>
-                        </div>
+
+    <!-- check if session is empty (not logged in)  -->
+    <?php if(empty($_SESSION)) : ?>
+        <div class="modal fade" id="modal-login" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <img src="images/pawslogo.png" alt="Logo" class="modal-logo">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Login</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body"> 
+                        <form id="loginform" action="database/login.php" method="post"> <!-- put php here -->
+                            <p>
+                            Username:
+                            </p>
+                            <input type="text" id="username" name="username" required>
+                            <p>
+                            Password:
+                            </p>
+                            <input type="password" id="password" name="password" required>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-primary" form="loginform" name="login">Login</button>
                     </div>
                 </div>
             </div>
-        <?php endif ?>
-    </main>
+        </div>
+    <?php endif ?>
 
     
+    <!-- this php bit of code displays the user's full name -->
+    <?php foreach($query as $q): ?>
+        
+        <div class="content-top-accountuser">
+            <h2>
+                User Profile: 
+            </h2>
 
-    </main>
+            <h2><?php echo $q['fname'] ?> <?php echo  $q['mname'] ?> <?php echo  $q['lname'] ?></h2>
+        </div>
 
+    <?php endforeach; ?>
+
+    <div class="content-middle-accountuser">
+        <h3>
+            Booked List:
+        </h3>
+        <table id="example" class="table table-hover table-bordered table-success masterlist" style="width:100%">
+            <thead>
+                <tr class="table-dark">
+                    <th>Number of Pets</th>
+                    <th>Check In</th>
+                    <th>Check out</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <?php while($row = mysqli_fetch_array($result)):; ?>
+                    <td><?php echo $row[3];?></td>
+                    <td><?php echo $row[1];?></td>
+                    <td><?php echo $row[2];?></td>  
+                </tr>
+                    <?php endwhile;?>
+            </tbody>
+        </table>
+    </div>
+    <!-- this table with php displays the bookings the user had made -->
+    
 
     
+    </main>
+
     <footer>
         <div class="footer-left">
             <a href="aboutus.php">
@@ -95,14 +128,13 @@
                     About Us
                 </h4>
             </a>
-            
 
             <img src="images/pawslogo.png" alt="logo image">
-
+            
             <a href="contactphp">
-            <h4>
-                Contact Us 
-            </h4>
+                <h4>
+                    Contact Us 
+                </h4>
             </a>
             
         </div>
@@ -136,9 +168,6 @@
     </footer>
 
 
-
     <script src="js/bootstrap.js"></script>
-    <script src=""></script>
 </body>
-
 </html>
