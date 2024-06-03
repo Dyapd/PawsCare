@@ -127,7 +127,7 @@
 
             <img src="images/pawslogo.png" alt="logo image">
             
-            <a href="contactphp">
+            <a href="contact.php">
                 <h4>
                     Contact Us 
                 </h4>
@@ -150,15 +150,6 @@
             paws.cares4@gmail.com
             </h4>
 
-            <div class="footer-right-container">
-                <p>
-                    Get Socials
-                </p>
-
-                <img src="#" alt="fb logo">
-                <img src="#" alt="X logo">
-                <img src="#" alt="instagram logo">
-            </div>
         </div>
 
     </footer>

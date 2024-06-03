@@ -120,13 +120,39 @@
         </div>
 
         <div class="content-middle-home">
-            <h2>
-                Why Paw Cares?
-            </h2>
+
+            <div class="middle-h2-home">
+                <h2>
+                    Why Paw Cares?
+                </h2>
+            </div>
+            
+
+            <div class="card homecard" style="width: 18rem;">
+                <div class="card-body bodycard">
+                    <h5 class="card-title">Great for your pet</h5>
+                    <p class="card-text">Get a pet lover to care, not a cage!</p>
+                    <p class="card-text">Personal care and attention</p>
+                    <p class="card-text">Peaceful environment</p>
+                </div>
+            </div>
+
+            <div class="card homecard" style="width: 18rem;">
+                <div class="card-body bodycard">
+                    <h5 class="card-title">Great for your you</h5>
+                    <p class="card-text">Book a reservation online</p>
+                    <p class="card-text">Reliable customer service</p>
+                    <p class="card-text">Receive constant updates about your pet</p>
+                </div>
+            </div>
+
+            
+
         </div>
 
         <div class="content-bottom-home">
 
+        
             <div class="content-bottom-topleft-home">
                 <h2>
                     Services
@@ -136,7 +162,7 @@
             <br>
 
             <div class="content-bottom-left-home">
-                <img src="#" alt="Dog loving">
+
                 <hr>
                 
                 <h3>
@@ -148,11 +174,9 @@
                     Fur Styling <br>
                     Flea/Tick Treatment <br>
                 </p>
-                <hr>
             </div>
 
             <div class="content-bottom-right-home">
-            <img src="#" alt="Cat loving">
                 <hr>
                 <h3>
                     Boarding
@@ -163,8 +187,9 @@
                     Spacious Rooms
 
                 </p>
-                <hr>
             </div>
+
+            <hr>
         </div>
 
 
@@ -183,7 +208,7 @@
 
             <img src="images/pawslogo.png" alt="logo image">
             
-            <a href="contactphp">
+            <a href="contact.php">
                 <h4>
                     Contact Us 
                 </h4>
@@ -206,15 +231,6 @@
             paws.cares4@gmail.com
             </h4>
 
-            <div class="footer-right-container">
-                <p>
-                    Get Socials
-                </p>
-
-                <img src="#" alt="fb logo">
-                <img src="#" alt="X logo">
-                <img src="#" alt="instagram logo">
-            </div>
         </div>
 
     </footer>
