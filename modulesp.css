@@ -119,21 +119,21 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh; 
+    height: 90vh; 
 }
 
 .login-form {
     border: 2px solid #ccc;
     padding: 20px;     
     background-color: #f9f9f9;
-    max-width: 400px; 
+    max-width: 600px; 
     width: 100%;
     box-sizing: border-box;
     font-weight: bold;
 }
 
-form.textFields-form {
-    max-width: 3000px;
+.register{
+    height: 25px;
     width: 100%; 
     padding: 8px;
     margin-bottom: 10px;
