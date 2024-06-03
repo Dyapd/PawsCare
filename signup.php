@@ -46,73 +46,73 @@
         
     </header>
 
-<main class="main-signup">
-    <?php if(empty($_SESSION)) : ?>
-        <div class="modal fade" id="modal-login" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <img src="images/pawslogo.png" alt="Logo" class="modal-logo">
-                        <h1 class="modal-title fs-5" id="exampleModalLabel">Login</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body"> 
-                        <form id="loginform" action="database/login.php" method="post"> <!-- put php here -->
-                            <p>
-                            Username:
-                            </p>
-                            <input type="text" id="username" name="username" required>
-                            <p>
-                            Password:
-                            </p>
-                            <input type="password" id="password" name="password" required>
-                        </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button class="btn btn-primary" form="loginform" name="login">Login</button>
+    <main class="main-signup">
+        <?php if(empty($_SESSION)) : ?>
+            <div class="modal fade" id="modal-login" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <img src="images/pawslogo.png" alt="Logo" class="modal-logo">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Login</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body"> 
+                            <form id="loginform" action="database/login.php" method="post"> <!-- put php here -->
+                                <p>
+                                Username:
+                                </p>
+                                <input type="text" id="username" name="username" required>
+                                <p>
+                                Password:
+                                </p>
+                                <input type="password" id="password" name="password" required>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-primary" form="loginform" name="login">Login</button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    <?php endif ?>
+        <?php endif ?>
 
-    <div class="container">
-    
-    <form name="entryForm" action="#" class="login-form" method="post" enctype="multipart/form-data" required>    
-        <h1 class="sign">Signup Form</h1>
-        <div class="input-group">
-            <label for="fname" class="register-label">First Name*:</label>
-            <input type="text" class="textFields-form register" name="fname" id="fname" required>
-        </div>
+        <div class="container">
+        
+        <form name="entryForm" action="#" class="login-form" method="post" enctype="multipart/form-data" required>    
+            <h1 class="sign">Signup Form</h1>
+            <div class="input-group">
+                <label for="fname" class="register-label">First Name*:</label>
+                <input type="text" class="textFields-form register" name="fname" id="fname" required>
+            </div>
 
-        <div class="input-group">
-            <label for="mname" class="register-label">Middle Name*:</label>
-            <input type="text" class="textFields-form register" name="mname" id="mname" required>
-        </div>
+            <div class="input-group">
+                <label for="mname" class="register-label">Middle Name*:</label>
+                <input type="text" class="textFields-form register" name="mname" id="mname" required>
+            </div>
 
-        <div class="input-group">
-            <label for="lname" class="register-label">Last Name*:</label>
-            <input type="text" class="textFields-form register" name="lname" id="lname" required>
-        </div>
+            <div class="input-group">
+                <label for="lname" class="register-label">Last Name*:</label>
+                <input type="text" class="textFields-form register" name="lname" id="lname" required>
+            </div>
 
-        <div class="input-group">
-            <label for="username" class="register-label">Username*:</label>
-            <input type="text" class="textFields-form register" name="username" id="username" required>
-        </div>
+            <div class="input-group">
+                <label for="username" class="register-label">Username*:</label>
+                <input type="text" class="textFields-form register" name="username" id="username" required>
+            </div>
 
-        <div class="input-group">
-            <label for="password" class="register-label">Password*:</label>
-            <input type="password" class="textFields-form register" name="password" id="password"
-                pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,12}$"
-                title="Password must be 8-12 characters long and include at least one lowercase letter, one uppercase letter, one digit, and one special character"
-                required>
-        </div>
+            <div class="input-group">
+                <label for="password" class="register-label">Password*:</label>
+                <input type="password" class="textFields-form register" name="password" id="password"
+                    pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,12}$"
+                    title="Password must be 8-12 characters long and include at least one lowercase letter, one uppercase letter, one digit, and one special character"
+                    required>
+            </div>
 
-        <button class="submit-btn" name="signupform">Submit</button>
-    </form>
-</div>
+            <button class="submit-btn" name="signupform">Submit</button>
+        </form>
+    </div>
 
-</main>
+    </main>
 
 
     
