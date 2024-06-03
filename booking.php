@@ -108,13 +108,13 @@
                     <br>
                     <br>
                     
-                    <label for="groom" class="menu-form gform">Grooming Service:</label> 
-                    <input type="checkbox" class="checkboxg" name="groom"> 
+                    <label for="groomingservice" class="menu-form gform">Grooming Service:</label> 
+                    <input type="checkbox" class="checkboxg" name="groomingservice"> 
 
                     <br>
                     <br>
-                    <label for="numdogs" class="menu-form mform">Additional Instructions - (Optional)</label> <br>
-                    <textarea name="reporte" id="report" rows="10" class="textarea-form" name="report"></textarea> 
+                    <label for="info" class="menu-form mform">Additional Instructions - (Optional)</label> <br>
+                    <textarea name="reporte" id="report" rows="10" class="textarea-form" name="info"></textarea> 
                     <br>
                     <br>
 
