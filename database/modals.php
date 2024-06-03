@@ -75,7 +75,6 @@
                 $numcats = $_POST['numcats'];
                 $numdogs = $_POST['numdogs']; 
                 $username = $_SESSION['loggedon'];
-
                 $numpets = $numcats + $numdogs;
 
                 if ($numpets == 0){
