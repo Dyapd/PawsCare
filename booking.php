@@ -40,7 +40,7 @@
                 <!-- check if session has loggedon set if so then is logged in -->
                 <?php if(isset($_SESSION['loggedon'])) : ?>
                     <a href="booking.php">Book</a>
-                    <a href="accountuser.php">Profile</a>
+                    <a href="accountuser.php?username='<?php echo $_SESSION['loggedon']  ?>'">Profile</a>
                     <a href="database/logout.php" >Signout</a>
                 <?php endif ?>
             </div>
@@ -104,7 +104,7 @@
                     <input type="date" class="textFields-form" name="todate" id="dateto" required> <br>
                     <br>
                     <label for="numpets" class="menu-form">Number of Pets*:</label> <br>
-                    <input type="number" min="0" class="textFields-form" name="numcats" value="1" required> <br>
+                    <input type="number" min="0" class="textFields-form" name="numpets" value="1" required> <br>
                     <br>
                     <label for="numcats" class="menu-form">Number of Cats:</label> <br>
                     <input type="number" min="0" class="textFields-form" name="numcats" value="0" required> <br>

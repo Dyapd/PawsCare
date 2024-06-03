@@ -141,3 +141,16 @@
     margin-left: 25%;
     margin-bottom: 2%;
 }
+
+.bookbutton:hover{
+    background-color: #b49564;
+}
+
+/* styles for accountuser */
+
+.content-top-accountuser{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+}
