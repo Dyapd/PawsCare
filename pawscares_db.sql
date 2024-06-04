@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 02, 2024 at 05:04 AM
+-- Generation Time: Jun 04, 2024 at 04:25 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.0.30
 
@@ -24,6 +24,24 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `bookings_tbl`
+--
+
+CREATE TABLE `bookings_tbl` (
+  `id` int(255) NOT NULL,
+  `fromdate` date NOT NULL,
+  `todate` date NOT NULL,
+  `numpets` int(11) NOT NULL,
+  `numcats` int(255) NOT NULL,
+  `numdogs` int(255) NOT NULL,
+  `groomingservice` tinyint(1) NOT NULL,
+  `info` longtext NOT NULL,
+  `username` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `profiles_tbl`
 --
 
@@ -32,6 +50,7 @@ CREATE TABLE `profiles_tbl` (
   `fname` varchar(255) NOT NULL,
   `mname` varchar(255) NOT NULL,
   `lname` varchar(255) NOT NULL,
+  `phone` varchar(255) NOT NULL,
   `username` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -40,61 +59,52 @@ CREATE TABLE `profiles_tbl` (
 -- Dumping data for table `profiles_tbl`
 --
 
-INSERT INTO `profiles_tbl` (`id`, `fname`, `mname`, `lname`, `username`, `password`) VALUES
-(1, '0', '0', '0', '0', '0'),
-(2, '0', '0', '0', '0', '0'),
-(3, 'a', 'a', 'a', 'example', 'example');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `users_db`
---
-
-CREATE TABLE `users_db` (
-  `id` int(255) NOT NULL,
-  `username` varchar(255) NOT NULL,
-  `password` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `users_db`
---
-
-INSERT INTO `users_db` (`id`, `username`, `password`) VALUES
-(1, 'admin', 'admin');
+INSERT INTO `profiles_tbl` (`id`, `fname`, `mname`, `lname`, `phone`, `username`, `password`) VALUES
+(9, 'Kenshin', 'Casas', 'Madanglog', '09782149804', 'knshn2', 'knshn2');
 
 --
 -- Indexes for dumped tables
 --
 
 --
+-- Indexes for table `bookings_tbl`
+--
+ALTER TABLE `bookings_tbl`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `FK1_BK` (`username`);
+
+--
 -- Indexes for table `profiles_tbl`
 --
 ALTER TABLE `profiles_tbl`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `users_db`
---
-ALTER TABLE `users_db`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `username` (`username`);
 
 --
 -- AUTO_INCREMENT for dumped tables
 --
 
 --
+-- AUTO_INCREMENT for table `bookings_tbl`
+--
+ALTER TABLE `bookings_tbl`
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+
+--
 -- AUTO_INCREMENT for table `profiles_tbl`
 --
 ALTER TABLE `profiles_tbl`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
--- AUTO_INCREMENT for table `users_db`
+-- Constraints for dumped tables
 --
-ALTER TABLE `users_db`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- Constraints for table `bookings_tbl`
+--
+ALTER TABLE `bookings_tbl`
+  ADD CONSTRAINT `FK1_BK` FOREIGN KEY (`username`) REFERENCES `profiles_tbl` (`username`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
