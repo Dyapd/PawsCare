@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 04, 2024 at 04:25 AM
+-- Generation Time: Jun 10, 2024 at 01:55 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.0.30
 
@@ -60,7 +60,8 @@ CREATE TABLE `profiles_tbl` (
 --
 
 INSERT INTO `profiles_tbl` (`id`, `fname`, `mname`, `lname`, `phone`, `username`, `password`) VALUES
-(9, 'Kenshin', 'Casas', 'Madanglog', '09782149804', 'knshn2', 'knshn2');
+(9, 'Kenshin', 'Casas', 'Madanglog', '09782149804', 'knshn2', 'knshn2'),
+(12, 'Allen', 'Espinar', 'Payad', '09614850754', 'allenpayad', 'allenpayad');
 
 --
 -- Indexes for dumped tables
@@ -94,7 +95,7 @@ ALTER TABLE `bookings_tbl`
 -- AUTO_INCREMENT for table `profiles_tbl`
 --
 ALTER TABLE `profiles_tbl`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- Constraints for dumped tables
